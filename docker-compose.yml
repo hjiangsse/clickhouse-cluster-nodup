@@ -1,0 +1,563 @@
+version: "3.8"
+
+services:
+
+  ch-master:
+    container_name: ch_master
+    image: yandex/clickhouse-server:latest
+    depends_on:
+      - ch-sub-1
+      - ch-sub-2
+      - ch-sub-3
+      - ch-sub-4
+      - ch-sub-5
+      - ch-sub-6
+      - ch-sub-7
+      - ch-sub-8
+      - ch-sub-9
+      - ch-sub-10
+      - ch-sub-11
+      - ch-sub-12
+      - ch-sub-13
+      - ch-sub-14
+      - ch-sub-15
+      - ch-sub-16
+      - ch-sub-17
+      - ch-sub-18
+      - ch-sub-19
+      - ch-sub-20
+      - ch-sub-21
+      - ch-sub-22
+      - ch-sub-23
+      - ch-sub-24
+      - ch-sub-25
+      - ch-sub-26
+      - ch-sub-27
+      - ch-sub-28
+      - ch-sub-29
+      - ch-sub-30
+    ports:
+      - 9000:9000
+      - 8123:8123
+    volumes:
+      - type: volume
+        source: ch-master-data
+        target: /var/lib/clickhouse
+      - type: volume
+        source: ch-master-logs
+        target: /var/log/clickhouse-server
+      - ./master-config.xml:/etc/clickhouse-server/config.xml
+
+  ch-sub-1:
+    container_name: ch_sub_1
+    image: yandex/clickhouse-server:latest
+    ports:
+      - 9001:9000
+      - 8124:8123
+    volumes:
+      - type: volume
+        source: ch-sub-1-data
+        target: /var/lib/clickhouse
+      - type: volume
+        source: ch-sub-1-logs
+        target: /var/log/clickhouse-server
+      - ./sub-config.xml:/etc/clickhouse-server/config.xml
+
+  ch-sub-2:
+    container_name: ch_sub_2
+    image: yandex/clickhouse-server:latest
+    ports:
+      - 9002:9000
+      - 8125:8123
+    volumes:
+      - type: volume
+        source: ch-sub-2-data
+        target: /var/lib/clickhouse
+      - type: volume
+        source: ch-sub-2-logs
+        target: /var/log/clickhouse-server
+      - ./sub-config.xml:/etc/clickhouse-server/config.xml
+
+  ch-sub-3:
+    container_name: ch_sub_3
+    image: yandex/clickhouse-server:latest
+    ports:
+      - 9003:9000
+      - 8126:8123
+    volumes:
+      - type: volume
+        source: ch-sub-3-data
+        target: /var/lib/clickhouse
+      - type: volume
+        source: ch-sub-3-logs
+        target: /var/log/clickhouse-server
+      - ./sub-config.xml:/etc/clickhouse-server/config.xml
+
+  ch-sub-4:
+    container_name: ch_sub_4
+    image: yandex/clickhouse-server:latest
+    ports:
+      - 9004:9000
+      - 8127:8123
+    volumes:
+      - type: volume
+        source: ch-sub-4-data
+        target: /var/lib/clickhouse
+      - type: volume
+        source: ch-sub-4-logs
+        target: /var/log/clickhouse-server
+      - ./sub-config.xml:/etc/clickhouse-server/config.xml
+
+  ch-sub-5:
+    container_name: ch_sub_5
+    image: yandex/clickhouse-server:latest
+    ports:
+      - 9005:9000
+      - 8128:8123
+    volumes:
+      - type: volume
+        source: ch-sub-5-data
+        target: /var/lib/clickhouse
+      - type: volume
+        source: ch-sub-5-logs
+        target: /var/log/clickhouse-server
+      - ./sub-config.xml:/etc/clickhouse-server/config.xml
+
+  ch-sub-6:
+    container_name: ch_sub_6
+    image: yandex/clickhouse-server:latest
+    ports:
+      - 9006:9000
+      - 8129:8123
+    volumes:
+      - type: volume
+        source: ch-sub-6-data
+        target: /var/lib/clickhouse
+      - type: volume
+        source: ch-sub-6-logs
+        target: /var/log/clickhouse-server
+      - ./sub-config.xml:/etc/clickhouse-server/config.xml
+
+  ch-sub-7:
+    container_name: ch_sub_7
+    image: yandex/clickhouse-server:latest
+    ports:
+      - 9007:9000
+      - 8130:8123
+    volumes:
+      - type: volume
+        source: ch-sub-7-data
+        target: /var/lib/clickhouse
+      - type: volume
+        source: ch-sub-7-logs
+        target: /var/log/clickhouse-server
+      - ./sub-config.xml:/etc/clickhouse-server/config.xml
+
+  ch-sub-8:
+    container_name: ch_sub_8
+    image: yandex/clickhouse-server:latest
+    ports:
+      - 9008:9000
+      - 8131:8123
+    volumes:
+      - type: volume
+        source: ch-sub-8-data
+        target: /var/lib/clickhouse
+      - type: volume
+        source: ch-sub-8-logs
+        target: /var/log/clickhouse-server
+      - ./sub-config.xml:/etc/clickhouse-server/config.xml
+
+  ch-sub-9:
+    container_name: ch_sub_9
+    image: yandex/clickhouse-server:latest
+    ports:
+      - 9009:9000
+      - 8132:8123
+    volumes:
+      - type: volume
+        source: ch-sub-9-data
+        target: /var/lib/clickhouse
+      - type: volume
+        source: ch-sub-9-logs
+        target: /var/log/clickhouse-server
+      - ./sub-config.xml:/etc/clickhouse-server/config.xml
+
+  ch-sub-10:
+    container_name: ch_sub_10
+    image: yandex/clickhouse-server:latest
+    ports:
+      - 9010:9000
+      - 8133:8123
+    volumes:
+      - type: volume
+        source: ch-sub-10-data
+        target: /var/lib/clickhouse
+      - type: volume
+        source: ch-sub-10-logs
+        target: /var/log/clickhouse-server
+      - ./sub-config.xml:/etc/clickhouse-server/config.xml
+
+  ch-sub-11:
+    container_name: ch_sub_11
+    image: yandex/clickhouse-server:latest
+    ports:
+      - 9011:9000
+      - 8134:8123
+    volumes:
+      - type: volume
+        source: ch-sub-11-data
+        target: /var/lib/clickhouse
+      - type: volume
+        source: ch-sub-11-logs
+        target: /var/log/clickhouse-server
+      - ./sub-config.xml:/etc/clickhouse-server/config.xml
+
+  ch-sub-12:
+    container_name: ch_sub_12
+    image: yandex/clickhouse-server:latest
+    ports:
+      - 9012:9000
+      - 8135:8123
+    volumes:
+      - type: volume
+        source: ch-sub-12-data
+        target: /var/lib/clickhouse
+      - type: volume
+        source: ch-sub-12-logs
+        target: /var/log/clickhouse-server
+      - ./sub-config.xml:/etc/clickhouse-server/config.xml
+
+  ch-sub-13:
+    container_name: ch_sub_13
+    image: yandex/clickhouse-server:latest
+    ports:
+      - 9013:9000
+      - 8136:8123
+    volumes:
+      - type: volume
+        source: ch-sub-13-data
+        target: /var/lib/clickhouse
+      - type: volume
+        source: ch-sub-13-logs
+        target: /var/log/clickhouse-server
+      - ./sub-config.xml:/etc/clickhouse-server/config.xml
+
+  ch-sub-14:
+    container_name: ch_sub_14
+    image: yandex/clickhouse-server:latest
+    ports:
+      - 9014:9000
+      - 8137:8123
+    volumes:
+      - type: volume
+        source: ch-sub-14-data
+        target: /var/lib/clickhouse
+      - type: volume
+        source: ch-sub-14-logs
+        target: /var/log/clickhouse-server
+      - ./sub-config.xml:/etc/clickhouse-server/config.xml
+
+  ch-sub-15:
+    container_name: ch_sub_15
+    image: yandex/clickhouse-server:latest
+    ports:
+      - 9015:9000
+      - 8138:8123
+    volumes:
+      - type: volume
+        source: ch-sub-15-data
+        target: /var/lib/clickhouse
+      - type: volume
+        source: ch-sub-15-logs
+        target: /var/log/clickhouse-server
+      - ./sub-config.xml:/etc/clickhouse-server/config.xml
+
+  ch-sub-16:
+    container_name: ch_sub_16
+    image: yandex/clickhouse-server:latest
+    ports:
+      - 9016:9000
+      - 8139:8123
+    volumes:
+      - type: volume
+        source: ch-sub-16-data
+        target: /var/lib/clickhouse
+      - type: volume
+        source: ch-sub-16-logs
+        target: /var/log/clickhouse-server
+      - ./sub-config.xml:/etc/clickhouse-server/config.xml
+
+  ch-sub-17:
+    container_name: ch_sub_17
+    image: yandex/clickhouse-server:latest
+    ports:
+      - 9017:9000
+      - 8140:8123
+    volumes:
+      - type: volume
+        source: ch-sub-17-data
+        target: /var/lib/clickhouse
+      - type: volume
+        source: ch-sub-17-logs
+        target: /var/log/clickhouse-server
+      - ./sub-config.xml:/etc/clickhouse-server/config.xml
+
+  ch-sub-18:
+    container_name: ch_sub_18
+    image: yandex/clickhouse-server:latest
+    ports:
+      - 9018:9000
+      - 8141:8123
+    volumes:
+      - type: volume
+        source: ch-sub-18-data
+        target: /var/lib/clickhouse
+      - type: volume
+        source: ch-sub-18-logs
+        target: /var/log/clickhouse-server
+      - ./sub-config.xml:/etc/clickhouse-server/config.xml
+
+  ch-sub-19:
+    container_name: ch_sub_19
+    image: yandex/clickhouse-server:latest
+    ports:
+      - 9019:9000
+      - 8142:8123
+    volumes:
+      - type: volume
+        source: ch-sub-19-data
+        target: /var/lib/clickhouse
+      - type: volume
+        source: ch-sub-19-logs
+        target: /var/log/clickhouse-server
+      - ./sub-config.xml:/etc/clickhouse-server/config.xml
+
+  ch-sub-20:
+    container_name: ch_sub_20
+    image: yandex/clickhouse-server:latest
+    ports:
+      - 9020:9000
+      - 8143:8123
+    volumes:
+      - type: volume
+        source: ch-sub-20-data
+        target: /var/lib/clickhouse
+      - type: volume
+        source: ch-sub-20-logs
+        target: /var/log/clickhouse-server
+      - ./sub-config.xml:/etc/clickhouse-server/config.xml
+
+  ch-sub-21:
+    container_name: ch_sub_21
+    image: yandex/clickhouse-server:latest
+    ports:
+      - 9021:9000
+      - 8144:8123
+    volumes:
+      - type: volume
+        source: ch-sub-21-data
+        target: /var/lib/clickhouse
+      - type: volume
+        source: ch-sub-21-logs
+        target: /var/log/clickhouse-server
+      - ./sub-config.xml:/etc/clickhouse-server/config.xml
+
+  ch-sub-22:
+    container_name: ch_sub_22
+    image: yandex/clickhouse-server:latest
+    ports:
+      - 9022:9000
+      - 8145:8123
+    volumes:
+      - type: volume
+        source: ch-sub-22-data
+        target: /var/lib/clickhouse
+      - type: volume
+        source: ch-sub-22-logs
+        target: /var/log/clickhouse-server
+      - ./sub-config.xml:/etc/clickhouse-server/config.xml
+
+  ch-sub-23:
+    container_name: ch_sub_23
+    image: yandex/clickhouse-server:latest
+    ports:
+      - 9023:9000
+      - 8146:8123
+    volumes:
+      - type: volume
+        source: ch-sub-23-data
+        target: /var/lib/clickhouse
+      - type: volume
+        source: ch-sub-23-logs
+        target: /var/log/clickhouse-server
+      - ./sub-config.xml:/etc/clickhouse-server/config.xml
+
+  ch-sub-24:
+    container_name: ch_sub_24
+    image: yandex/clickhouse-server:latest
+    ports:
+      - 9024:9000
+      - 8147:8123
+    volumes:
+      - type: volume
+        source: ch-sub-24-data
+        target: /var/lib/clickhouse
+      - type: volume
+        source: ch-sub-24-logs
+        target: /var/log/clickhouse-server
+      - ./sub-config.xml:/etc/clickhouse-server/config.xml
+
+  ch-sub-25:
+    container_name: ch_sub_25
+    image: yandex/clickhouse-server:latest
+    ports:
+      - 9025:9000
+      - 8148:8123
+    volumes:
+      - type: volume
+        source: ch-sub-25-data
+        target: /var/lib/clickhouse
+      - type: volume
+        source: ch-sub-25-logs
+        target: /var/log/clickhouse-server
+      - ./sub-config.xml:/etc/clickhouse-server/config.xml
+
+  ch-sub-26:
+    container_name: ch_sub_26
+    image: yandex/clickhouse-server:latest
+    ports:
+      - 9026:9000
+      - 8149:8123
+    volumes:
+      - type: volume
+        source: ch-sub-26-data
+        target: /var/lib/clickhouse
+      - type: volume
+        source: ch-sub-26-logs
+        target: /var/log/clickhouse-server
+      - ./sub-config.xml:/etc/clickhouse-server/config.xml
+
+  ch-sub-27:
+    container_name: ch_sub_27
+    image: yandex/clickhouse-server:latest
+    ports:
+      - 9027:9000
+      - 8150:8123
+    volumes:
+      - type: volume
+        source: ch-sub-27-data
+        target: /var/lib/clickhouse
+      - type: volume
+        source: ch-sub-27-logs
+        target: /var/log/clickhouse-server
+      - ./sub-config.xml:/etc/clickhouse-server/config.xml
+
+  ch-sub-28:
+    container_name: ch_sub_28
+    image: yandex/clickhouse-server:latest
+    ports:
+      - 9028:9000
+      - 8151:8123
+    volumes:
+      - type: volume
+        source: ch-sub-28-data
+        target: /var/lib/clickhouse
+      - type: volume
+        source: ch-sub-28-logs
+        target: /var/log/clickhouse-server
+      - ./sub-config.xml:/etc/clickhouse-server/config.xml
+
+  ch-sub-29:
+    container_name: ch_sub_29
+    image: yandex/clickhouse-server:latest
+    ports:
+      - 9029:9000
+      - 8152:8123
+    volumes:
+      - type: volume
+        source: ch-sub-29-data
+        target: /var/lib/clickhouse
+      - type: volume
+        source: ch-sub-29-logs
+        target: /var/log/clickhouse-server
+      - ./sub-config.xml:/etc/clickhouse-server/config.xml
+
+  ch-sub-30:
+    container_name: ch_sub_30
+    image: yandex/clickhouse-server:latest
+    ports:
+      - 9030:9000
+      - 8153:8123
+    volumes:
+      - type: volume
+        source: ch-sub-30-data
+        target: /var/lib/clickhouse
+      - type: volume
+        source: ch-sub-30-logs
+        target: /var/log/clickhouse-server
+      - ./sub-config.xml:/etc/clickhouse-server/config.xml
+
+volumes:
+  ch-master-data:
+  ch-master-logs:
+  ch-sub-1-data:
+  ch-sub-1-logs:
+  ch-sub-2-data:
+  ch-sub-2-logs:
+  ch-sub-3-data:
+  ch-sub-3-logs:
+  ch-sub-4-data:
+  ch-sub-4-logs:
+  ch-sub-5-data:
+  ch-sub-5-logs:
+  ch-sub-6-data:
+  ch-sub-6-logs:
+  ch-sub-7-data:
+  ch-sub-7-logs:
+  ch-sub-8-data:
+  ch-sub-8-logs:
+  ch-sub-9-data:
+  ch-sub-9-logs:
+  ch-sub-10-data:
+  ch-sub-10-logs:
+  ch-sub-11-data:
+  ch-sub-11-logs:
+  ch-sub-12-data:
+  ch-sub-12-logs:
+  ch-sub-13-data:
+  ch-sub-13-logs:
+  ch-sub-14-data:
+  ch-sub-14-logs:
+  ch-sub-15-data:
+  ch-sub-15-logs:
+  ch-sub-16-data:
+  ch-sub-16-logs:
+  ch-sub-17-data:
+  ch-sub-17-logs:
+  ch-sub-18-data:
+  ch-sub-18-logs:
+  ch-sub-19-data:
+  ch-sub-19-logs:
+  ch-sub-20-data:
+  ch-sub-20-logs:
+  ch-sub-21-data:
+  ch-sub-21-logs:
+  ch-sub-22-data:
+  ch-sub-22-logs:
+  ch-sub-23-data:
+  ch-sub-23-logs:
+  ch-sub-24-data:
+  ch-sub-24-logs:
+  ch-sub-25-data:
+  ch-sub-25-logs:
+  ch-sub-26-data:
+  ch-sub-26-logs:
+  ch-sub-27-data:
+  ch-sub-27-logs:
+  ch-sub-28-data:
+  ch-sub-28-logs:
+  ch-sub-29-data:
+  ch-sub-29-logs:
+  ch-sub-30-data:
+  ch-sub-30-logs:
